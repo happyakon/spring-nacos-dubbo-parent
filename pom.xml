@@ -103,8 +103,19 @@
                 <artifactId>mapstruct-processor</artifactId>
                 <version>${mapstruct.version}</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <name>maven release repository</name>
+            <url>http://192.168.2.104:8081/repository/akon-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>maven-snapshots</id>
+            <name>maven snapshots repository</name>
+            <url>http://192.168.2.104:8081/repository/akon-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
