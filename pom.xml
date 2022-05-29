@@ -114,7 +114,7 @@
         <snapshotRepository>
             <id>maven-snapshots</id>
             <name>maven snapshots repository</name>
-            <url>http://45.253.64.55:8081/repository/akon-snapshots/</url>
+            <url>http://45.253.64.55:12794/repository/akon-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
