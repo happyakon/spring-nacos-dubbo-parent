@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.3.12.RELEASE</version>
+        <version>2.4.2</version>
         <relativePath/>
     </parent>
     <groupId>com.akon.spring</groupId>
@@ -14,64 +14,35 @@
     <packaging>pom</packaging>
     <properties>
         <java.version>1.8</java.version>
-        <dubbo-spring-boot-starter.version>0.2.1.RELEASE</dubbo-spring-boot-starter.version>
-        <nacos-discovery-spring-boot-starter.version>0.2.1</nacos-discovery-spring-boot-starter.version>
-        <nacos-config-spring-boot.version>0.2.1</nacos-config-spring-boot.version>
-        <dubbo.version>2.7.15</dubbo.version>
-        <dubbo-registry-nacos.version>2.7.15</dubbo-registry-nacos.version>
-        <dubbo-spring-context-support.version>1.0.10</dubbo-spring-context-support.version>
-        <nacos-dubbo-privoder-facade.version>0.0.1-SNAPSHOT</nacos-dubbo-privoder-facade.version>
+        <spring-cloud-dependencies.verion>2020.0.1</spring-cloud-dependencies.verion>
+        <spring-cloud-alibaba-dependencies.verion>2021.1</spring-cloud-alibaba-dependencies.verion>
         <mybatis-spring-boot-starter.version>2.1.3</mybatis-spring-boot-starter.version>
         <druid-spring-boot-starter.version>1.1.10</druid-spring-boot-starter.version>
         <mysql-connector-java.version>8.0.21</mysql-connector-java.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
+        <javax.ws.rs-api.version>2.1.1</javax.ws.rs-api.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
     </properties>
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>2020.0.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>2021.1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>1.16.22</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-registry-nacos</artifactId>
-                <version>${dubbo-registry-nacos.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.spring</groupId>
-                <artifactId>spring-context-support</artifactId>
-                <version>${dubbo-spring-context-support.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.alibaba.boot</groupId>
-                <artifactId>nacos-config-spring-boot-starter</artifactId>
-                <version>${nacos-config-spring-boot.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.alibaba.boot</groupId>
-                <artifactId>dubbo-spring-boot-starter</artifactId>
-                <version>${dubbo-spring-boot-starter.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.boot</groupId>
-                <artifactId>nacos-discovery-spring-boot-starter</artifactId>
-                <version>${nacos-discovery-spring-boot-starter.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.akon.spring</groupId>
-                <artifactId>nacos-dubbo-privoder-facade</artifactId>
-                <version>${nacos-dubbo-privoder-facade.version}</version>
             </dependency>
 
             <dependency>
@@ -102,6 +73,18 @@
                 <groupId>org.mapstruct</groupId>
                 <artifactId>mapstruct-processor</artifactId>
                 <version>${mapstruct.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.ws.rs</groupId>
+                <artifactId>javax.ws.rs-api</artifactId>
+                <version>${javax.ws.rs-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
